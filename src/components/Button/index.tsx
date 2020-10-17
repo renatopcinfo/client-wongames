@@ -6,8 +6,7 @@ export type ButtonProps = {
 }
 
 const Button = ({ children, size = 'medium' }: ButtonProps) => (
-  <S.Wrapper size={size}>{!!children && <span>{children}</span>}
-  </S.Wrapper>
+  <S.Wrapper size={size}>{!!children && <span>{children}</span>}</S.Wrapper>
 )
 
 export default Button
