@@ -14,5 +14,5 @@ export default {
 export const Default: Story = (args) => <Button {...args} />
 
 Default.args = {
-  children: 'By now'
+  children: 'Buy now'
 }
