@@ -29,4 +29,5 @@ describe('<Highlight />', () => {
       backgroundImage: `url(${props.backgroundImage})`
     })
   })
+  
 })
