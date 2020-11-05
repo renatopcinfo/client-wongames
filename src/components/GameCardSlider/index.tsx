@@ -6,7 +6,7 @@ import GameCard, { GameCardProps } from 'components/GameCard'
 
 import * as S from './styles'
 
-type GameCardSliderProps = {
+export type GameCardSliderProps = {
   items: GameCardProps[]
   color?: 'white' | 'black'
 }
