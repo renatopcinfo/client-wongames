@@ -18,7 +18,7 @@ describe('<Checkbox />', () => {
     // label a partir do texto dela
     expect(screen.getByText(/checkbox label/i)).toHaveAttribute('for', 'check')
   })
-  
+
   it('should render without label', () => {
     renderWithTheme(<Checkbox />)
 
@@ -46,6 +46,18 @@ describe('<Checkbox />', () => {
     await waitFor(() => {
       expect(onCheck).toHaveBeenCalledTimes(1)
     })
+    expect(onCheck).toHaveBeenCalledWith(true)
   })
 
+  it('should dispatch onCheck when status changes', async () => {
+    const onCheck = jest.fn()
+
+    renderWithTheme(<Checkbox label="Checkbox" onCheck={onCheck} isChecked />)
+
+    userEvent.click(screen.getByRole('checkbox'))
+    await waitFor(() => {
+      expect(onCheck).toHaveBeenCalledTimes(1)
+    })
+    expect(onCheck).toHaveBeenCalledWith(false)
+  })
 })
