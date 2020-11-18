@@ -52,7 +52,7 @@ const settings: SliderSettings = {
 const GameCardSlider = ({ items, color = 'black' }: GameCardSliderProps) => (
   <S.Wrapper color={color}>
     <Slider settings={settings}>
-      {items.map((item, index) =>(
+      {items.map((item, index) => (
         <GameCard key={index} {...item} />
       ))}
     </Slider>

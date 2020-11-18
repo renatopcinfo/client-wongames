@@ -32,7 +32,7 @@ describe('<GameCard />', () => {
   })
 
   it('should render price in label', () => {
-     // renderiza o componente
+    // renderiza o componente
     // preço não tenha line-through
     // preço tenha o background secundário
 

@@ -42,7 +42,7 @@ export const MenuGroup = styled.div`
 
 export const MenuNav = styled.div`
   ${({ theme }) => css`
-  ${media.greaterThan('medium')`
+    ${media.greaterThan('medium')`
   margin-left: ${theme.spacings.small};
     `}
   `}
@@ -51,7 +51,7 @@ export const MenuNav = styled.div`
 export const MenuLink = styled.a`
   ${({ theme }) => css`
     position: relative;
-    color:${theme.colors.white};
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
     margin: 0.3rem ${theme.spacings.small} 0;
     text-decoration: none;
@@ -84,22 +84,22 @@ type MenuFullProps = {
 }
 
 export const MenuFull = styled.nav<MenuFullProps>`
-${({ theme, isOpen }) => css`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: ${theme.colors.white};
-  position: fixed;
-  z-index: ${theme.layers.menu};
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  overflow: hidden;
-  transition: opacity 0.3s ease-in-out;
-  opacity: ${isOpen ? 1 : 0};
-  pointer-events: ${isOpen ? 'all' : 'none'};
+  ${({ theme, isOpen }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: ${theme.colors.white};
+    position: fixed;
+    z-index: ${theme.layers.menu};
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
+    opacity: ${isOpen ? 1 : 0};
+    pointer-events: ${isOpen ? 'all' : 'none'};
 
     > svg {
       position: absolute;

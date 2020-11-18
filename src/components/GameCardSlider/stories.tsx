@@ -4,7 +4,6 @@ import { GameCardProps } from 'components/GameCard'
 import GameCardSlider from '.'
 import items from './mock'
 
-
 export default {
   title: 'GameCardSlider',
   component: GameCardSlider,

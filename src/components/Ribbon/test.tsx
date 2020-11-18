@@ -44,5 +44,4 @@ describe('<Ribbon />', () => {
       fontSize: '1.2rem'
     })
   })
-
 })

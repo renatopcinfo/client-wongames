@@ -48,7 +48,7 @@ export const Wrapper = styled.div<RibbonProps>`
     align-items: center;
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
-    
+
     &::before {
       content: '';
       position: absolute;

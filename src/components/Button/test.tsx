@@ -5,7 +5,7 @@ import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart
 import Button from '.'
 
 describe('<Button />', () => {
-   it('should render the medium size by default', () => {
+  it('should render the medium size by default', () => {
     const { container } = renderWithTheme(<Button>Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
@@ -15,7 +15,7 @@ describe('<Button />', () => {
     })
 
     expect(container.firstChild).toMatchSnapshot()
-  }) 
+  })
 
   it('should render the small size', () => {
     renderWithTheme(<Button size="small">Buy now</Button>)
@@ -42,15 +42,16 @@ describe('<Button />', () => {
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
       width: '100%'
     })
-  })  
+  })
 
   it('should render an icon version', () => {
     renderWithTheme(
-      <Button icon={<AddShoppingCart data-testid="icon" />}>Buy now</Button>)
+      <Button icon={<AddShoppingCart data-testid="icon" />}>Buy now</Button>
+    )
 
     expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
-  }) 
+  })
 
   it('should render a minimal version', () => {
     renderWithTheme(
@@ -78,13 +79,13 @@ describe('<Button />', () => {
       <Button as="a" href="/link">
         Buy now
       </Button>
-      )
+    )
 
-      debug(container)
-    
+    debug(container)
+
     expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
-      '/link')
+      '/link'
+    )
   })
 })
-

@@ -34,7 +34,7 @@ export const Wrapper = styled.section<WrapperProps>`
         margin: 0 -${theme.spacings.xsmall};
       }
     `}
-    
+
     .slick-prev,
     .slick-next {
       display: block;

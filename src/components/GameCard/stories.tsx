@@ -18,12 +18,12 @@ export default {
   },
   argTypes: {
     onFav: { action: 'clicked' },
-    ribbon: { type: 'string' } 
+    ribbon: { type: 'string' }
   }
 } as Meta
 
-export const Default: Story<GameCardProps> = (args) =>(
-   <div style={{ width: '30rem' }}>
+export const Default: Story<GameCardProps> = (args) => (
+  <div style={{ width: '30rem' }}>
     <GameCard {...args} />
   </div>
 )

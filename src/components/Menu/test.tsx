@@ -6,7 +6,7 @@ import Menu from '.'
 describe('<Menu />', () => {
   it('should render the menu', () => {
     renderWithTheme(<Menu />)
-    
+
     expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
     expect(screen.getByRole('img', { name: /won games/i })).toBeInTheDocument()
     expect(screen.getByLabelText(/search/i)).toBeInTheDocument()
@@ -18,7 +18,7 @@ describe('<Menu />', () => {
 
     //seleciona o menu
     const fullMenuElement = screen.getByRole('navigation', { hidden: true })
-    
+
     //verifica se o menu está escondido
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true')
     expect(fullMenuElement).toHaveStyle({ opacity: 0 })
@@ -36,7 +36,7 @@ describe('<Menu />', () => {
 
   it('should show register box when logged out', () => {
     renderWithTheme(<Menu />)
-    
+
     expect(screen.queryByText(/my account/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/whishlist/i)).not.toBeInTheDocument()
     expect(screen.getByText(/log in now/i)).toBeInTheDocument()
@@ -45,11 +45,10 @@ describe('<Menu />', () => {
 
   it('should show whishlist and accoutn when logged in', () => {
     renderWithTheme(<Menu username="renato" />)
-    
+
     expect(screen.getByText(/my account/i)).toBeInTheDocument()
     expect(screen.getByText(/wishlist/i)).toBeInTheDocument()
     expect(screen.queryByText(/log in now/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/sign up/i)).not.toBeInTheDocument()
   })
-
 })

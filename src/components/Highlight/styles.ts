@@ -14,16 +14,16 @@ const WrapperModifiers = {
     }
   `,
   left: () => css`
-  grid-template-areas: 'content floatimage';
-  grid-template-columns: 2fr 1.3fr;
+    grid-template-areas: 'content floatimage';
+    grid-template-columns: 2fr 1.3fr;
 
-  ${Content} {
-    text-align: left;
-  }
+    ${Content} {
+      text-align: left;
+    }
 
-  ${FloatImage} {
-    justify-self: end;
-  }
+    ${FloatImage} {
+      justify-self: end;
+    }
   `
 }
 
@@ -34,7 +34,7 @@ export const Wrapper = styled.section<WrapperProps>`
     background-position: center center;
     background-size: cover;
     height: 23rem;
-    display: grid;        
+    display: grid;
 
     &::after {
       content: '';
@@ -53,7 +53,7 @@ export const Wrapper = styled.section<WrapperProps>`
 `
 
 export const FloatImage = styled.img`
-${({ theme }) => css`
+  ${({ theme }) => css`
     grid-area: floatimage;
     z-index: ${theme.layers.base};
     max-height: 23rem;
@@ -67,7 +67,7 @@ ${({ theme }) => css`
 `
 
 export const Content = styled.div`
-${({ theme }) => css`{
+  ${({ theme }) => css`{
   grid-area: content;
   z-index: ${theme.layers.base};  
   padding: ${theme.spacings.xsmall};
@@ -79,26 +79,26 @@ ${({ theme }) => css`{
 `}
 `
 export const Title = styled.h2`
-${({ theme }) => css`
-  font-size: ${theme.font.sizes.large};
-  font-weight: ${theme.font.bold};
-  color: ${theme.colors.white};
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.large};
+    font-weight: ${theme.font.bold};
+    color: ${theme.colors.white};
 
-  ${media.greaterThan('medium')`
+    ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge};
   `}
-`}
+  `}
 `
 
 export const Subtitle = styled.h3`
-${({ theme }) => css`
-  font-size: ${theme.font.sizes.small};
-  font-weight: ${theme.font.light}; 
-  color: ${theme.colors.white};
-  margin-bottom: ${theme.spacings.medium};
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.light};
+    color: ${theme.colors.white};
+    margin-bottom: ${theme.spacings.medium};
 
-  ${media.greaterThan('medium')`
+    ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.large};
   `}
-`}
+  `}
 `

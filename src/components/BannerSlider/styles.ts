@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
       align-items: center;
       justify-content: center;
       margin-top: ${theme.spacings.small};
-      
+
       li {
         background: ${theme.colors.white};
         width: 1.2rem;

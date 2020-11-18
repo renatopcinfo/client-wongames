@@ -32,5 +32,5 @@ export function getServerSideProps() {
       freeGames: gamesMock,
       freeHighligth: highlightMock
     }
-  }  
+  }
 }

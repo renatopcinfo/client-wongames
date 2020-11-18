@@ -3,9 +3,9 @@ import { darken } from 'polished'
 
 import { ButtonProps } from '.'
 
-type WrapperProps = { 
+type WrapperProps = {
   hasIcon: boolean
- } & Pick<ButtonProps, 'size' | 'fullWidth' | 'minimal'>
+} & Pick<ButtonProps, 'size' | 'fullWidth' | 'minimal'>
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
@@ -40,7 +40,8 @@ const wrapperModifiers = {
     &:hover {
       color: ${darken(0.1, theme.colors.primary)};
     }
-    `}
+  `
+}
 
 export const Wrapper = styled.button<WrapperProps>`
   ${({ theme, size, fullWidth, hasIcon, minimal }) => css`
@@ -59,7 +60,7 @@ export const Wrapper = styled.button<WrapperProps>`
       background: ${minimal
         ? 'none'
         : `linear-gradient(180deg, #e35565 0%, #d958a6 50%)`};
-    };
+    }
 
     ${!!size && wrapperModifiers[size](theme)};
     ${!!fullWidth && wrapperModifiers.fullWidth()};
