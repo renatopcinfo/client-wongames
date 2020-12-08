@@ -74,14 +74,24 @@ describe('<Button />', () => {
     )
   })
 
+  it('should render a disabled Button', () => {
+    renderWithTheme(<Button disabled>Buy now</Button>)
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
+      'cursor',
+      'not-allowed',
+      {
+        modifier: ':disabled'
+      }
+    )
+  })
+
   it('should render Button as a link', () => {
-    const { debug, container } = renderWithTheme(
+    renderWithTheme(
       <Button as="a" href="/link">
         Buy now
       </Button>
     )
-
-    debug(container)
 
     expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
