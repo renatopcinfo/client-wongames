@@ -1,9 +1,13 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import FormPofile from '.'
+import FormProfile from '.'
 
 export default {
-  title: 'FormPofile',
-  component: FormPofile
+  title: 'Form/FormProfile',
+  component: FormProfile
 } as Meta
 
-export const Default: Story = () => <FormPofile />
+export const Default: Story = () => (
+  <div style={{ maxWidth: 860, margin: 'auto' }}>
+    <FormProfile />
+  </div>
+)
